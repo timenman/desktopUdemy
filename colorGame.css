@@ -1,0 +1,32 @@
+body{
+  background-color: #232323;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  background-color: white;
+  text-align: center;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.square{
+  background-color: purple;
+  width:30%;
+  margin: 1.6%;
+  padding-bottom: 30%;
+  float: left;
+}
+
+.hidden{
+  max-width:0px;
+  max-height: 0px;
+  background-color: #232323;
+}
