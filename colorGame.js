@@ -8,21 +8,28 @@ var pickedColorDisplay = document.querySelector("#pickedColorDisplay");
 var resetButton = document.querySelector("#resetButton");
 var easyButton = document.querySelector("#easyButton");
 var hardButton = document.querySelector("#hardButton");
+hardButton.classList.add("selected");
 
 pickedColorDisplay.textContent = pickedColor;
 
 easyButton.addEventListener("click", function(){
     diff = 3;
+    easyButton.classList.add("selected")
+    hardButton.classList.remove("selected")
     for(var i = 3; i < 6; i++){
-      squares[i].classList.add("hidden");
+      squares[i].style.display="none";
+  //    squares[i].classList.add("hidden");
     }
     reset();
   });
 
 hardButton.addEventListener("click", function(){
     diff =6;
+    easyButton.classList.remove("selected")
+    hardButton.classList.add("selected")
     for(var i = 3; i < 6; i++){
-      squares[i].classList.remove("hidden");
+      squares[i].style.display="block";
+  //    squares[i].classList.remove("hidden");
     }
     reset();
   });
